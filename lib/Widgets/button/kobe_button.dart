@@ -43,7 +43,7 @@ class KobeButton {
       } break; 
 
       case ButtonType.lowEmphasis: {
-        return Container();
+        return _lowEmphasis();
       } break; 
 
       case ButtonType.dialog: {
@@ -65,6 +65,23 @@ class KobeButton {
               child: Text('Button',style: TextStyle(color: HexColor("FFAFFF"))),
               borderRadius: BorderRadius.all(Radius.circular(properties['radius'])),
               color: properties['backgroundColor'],
+              pressedOpacity: 0.5,
+              onPressed: onPressed
+            ); 
+  }
+
+  Widget _lowEmphasis() {
+    return CupertinoButton(
+              child: Text('Button',style: TextStyle(color: HexColor("000000"))),
+              pressedOpacity: 0.5,
+              onPressed: onPressed
+            ); 
+  }
+
+  Widget _mediumEmphasis() {
+    return CupertinoButton(
+              child: Text('Button',style: TextStyle(color: HexColor("000000"))),
+              borderSide: BorderSide(color: Colors.blue),
               pressedOpacity: 0.5,
               onPressed: onPressed
             ); 
