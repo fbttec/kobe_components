@@ -30,6 +30,7 @@ class KobeButton {
   final String text; 
   final Function onPressed;
 
+//TO DO: check properties, if it's not missing anything
   const KobeButton({this.properties, this.text, this.onPressed}): super();
 
   Widget designFor(ButtonType type) {
@@ -39,7 +40,7 @@ class KobeButton {
       } break; 
 
       case ButtonType.mediumEmphasis: {
-        return Container();
+        return _mediumEmphasis();
       } break; 
 
       case ButtonType.lowEmphasis: {
@@ -47,11 +48,11 @@ class KobeButton {
       } break; 
 
       case ButtonType.dialog: {
-        return Container();
+        return _dialog();
       } break; 
 
       case ButtonType.destructive: {
-        return Container();
+        return _destructive();
       } break; 
 
       case ButtonType.icon: {
@@ -60,28 +61,52 @@ class KobeButton {
     }
   }
 
+//ready
   Widget _highEmphasis() {
     return CupertinoButton(
-              child: Text('Button',style: TextStyle(color: HexColor("FFAFFF"))),
-              borderRadius: BorderRadius.all(Radius.circular(properties['radius'])),
-              color: properties['backgroundColor'],
+              child: Text(text, style: TextStyle(color: HexColor(properties['textColor']))),
+              borderRadius: BorderRadius.all(Radius.circular(properties['borderRadius'])),
+              color: HexColor(properties['backgroundColor']),
               pressedOpacity: 0.5,
               onPressed: onPressed
             ); 
   }
 
-  Widget _lowEmphasis() {
-    return CupertinoButton(
-              child: Text('Button',style: TextStyle(color: HexColor("000000"))),
-              pressedOpacity: 0.5,
-              onPressed: onPressed
-            ); 
-  }
-
+//not ready
   Widget _mediumEmphasis() {
     return CupertinoButton(
-              child: Text('Button',style: TextStyle(color: HexColor("000000"))),
-              borderSide: BorderSide(color: Colors.blue),
+              child: Text(text, style: TextStyle(color: HexColor(properties['textColor']))),
+              borderRadius: BorderRadius.all(Radius.circular(properties['borderRadius'])), 
+              color: HexColor(properties['backgroundColor']),
+              pressedOpacity: 0.5,
+              onPressed: onPressed
+            ); 
+  }
+
+//ready
+  Widget _lowEmphasis() {
+    return CupertinoButton(
+              child: Text(text, style: TextStyle(color: HexColor(properties['textColor']))),
+              pressedOpacity: 0.5,
+              onPressed: onPressed
+            ); 
+  }
+
+//not ready
+  Widget _dialog() {
+     return CupertinoButton(
+              child: Text(text, style: TextStyle(color: HexColor(properties['textColor']))),
+              pressedOpacity: 0.5,
+              onPressed: onPressed
+            ); 
+  }
+
+//not ready
+   Widget _destructive() {
+     return CupertinoButton(
+              child: Text(text, style: TextStyle(color: HexColor(properties['textColor']))),
+              borderRadius: BorderRadius.all(Radius.circular(properties['borderRadius'])),
+              color: HexColor(properties['backgroundColor']),
               pressedOpacity: 0.5,
               onPressed: onPressed
             ); 
