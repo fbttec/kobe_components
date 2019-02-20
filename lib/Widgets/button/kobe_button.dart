@@ -63,7 +63,7 @@ class KobeButton {
 
 //ready
   Widget _highEmphasis() {
-    return CupertinoButton(
+    return CupertinoButton( 
               child: Text(text, style: TextStyle(color: HexColor(properties['textColor']))),
               borderRadius: BorderRadius.all(Radius.circular(properties['borderRadius'])),
               color: HexColor(properties['backgroundColor']),
@@ -92,16 +92,17 @@ class KobeButton {
             ); 
   }
 
-//not ready
+//ready
   Widget _dialog() {
      return CupertinoButton(
               child: Text(text, style: TextStyle(color: HexColor(properties['textColor']))),
+              
               pressedOpacity: 0.5,
               onPressed: onPressed
             ); 
   }
 
-//not ready
+//ready
    Widget _destructive() {
      return CupertinoButton(
               child: Text(text, style: TextStyle(color: HexColor(properties['textColor']))),
