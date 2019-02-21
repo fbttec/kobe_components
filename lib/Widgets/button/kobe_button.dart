@@ -61,7 +61,6 @@ class KobeButton {
     }
   }
 
-//ready
   Widget _highEmphasis() {
     return CupertinoButton( 
               child: Text(text, style: TextStyle(color: HexColor(properties['textColor']))),
@@ -72,18 +71,17 @@ class KobeButton {
             ); 
   }
 
-//not ready
   Widget _mediumEmphasis() {
-    return CupertinoButton(
+    return OutlineButton(
               child: Text(text, style: TextStyle(color: HexColor(properties['textColor']))),
-              borderRadius: BorderRadius.all(Radius.circular(properties['borderRadius'])), 
+              borderSide: BorderSide(width: properties['borderWidth'], color: HexColor(properties['borderColor'])),
+              //borderRadius: BorderRadius.all(Radius.circular(properties['borderRadius'])), 
               color: HexColor(properties['backgroundColor']),
-              pressedOpacity: 0.5,
+              //pressedOpacity: 0.5,
               onPressed: onPressed
             ); 
   }
 
-//ready
   Widget _lowEmphasis() {
     return CupertinoButton(
               child: Text(text, style: TextStyle(color: HexColor(properties['textColor']))),
@@ -92,7 +90,6 @@ class KobeButton {
             ); 
   }
 
-//ready
   Widget _dialog() {
      return CupertinoButton(
               child: Text(text, style: TextStyle(color: HexColor(properties['textColor']))),
@@ -102,8 +99,7 @@ class KobeButton {
             ); 
   }
 
-//ready
-   Widget _destructive() {
+  Widget _destructive() {
      return CupertinoButton(
               child: Text(text, style: TextStyle(color: HexColor(properties['textColor']))),
               borderRadius: BorderRadius.all(Radius.circular(properties['borderRadius'])),
