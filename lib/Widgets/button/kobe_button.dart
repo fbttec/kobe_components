@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:kobe_components/extension/kobe_color.dart';
+import 'package:kobe_components/extension/defaultConfig.dart';
 
 /*
     var backgroundColor: String?
@@ -31,7 +32,7 @@ class KobeButton {
   final Function onPressed;
 
 //TO DO: check properties, if it's not missing anything
-  const KobeButton({this.properties, this.text, this.onPressed}): super();
+  const KobeButton({this.properties = buttonPropertiesDefault, this.text = stringTest, this.onPressed}): super ();
 
   Widget designFor(ButtonType type) {
     switch(type) {
