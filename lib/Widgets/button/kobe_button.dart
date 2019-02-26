@@ -27,12 +27,17 @@ enum ButtonType {
 
 class KobeButton { 
 
-  final Map<String, Object> properties;
-  final String text; 
-  final Function onPressed;
+  Map<String, Object> properties;
+  String text; 
+  Function onPressed;
 
 //TO DO: check properties, if it's not missing anything
-  const KobeButton({this.properties = buttonPropertiesDefault, this.text = stringTest, this.onPressed}): super ();
+  // const KobeButton({this.properties = buttonPropertiesDefault, this.text = stringTest, this.onPressed}): super ();
+  KobeButton(Map<String, Object> properties, String text, Function onPressed) {
+    this.properties =properties;
+    this.text = text; 
+    this.onPressed = onPressed;
+  }
 
   Widget designFor(ButtonType type) {
     switch(type) {
