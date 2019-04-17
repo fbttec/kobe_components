@@ -16,7 +16,8 @@ import 'package:kobe_components/extension/defaultConfig.dart';
     var shadow: Shadow?
 */
 
-enum ButtonType {
+enum ButtonType 
+{
   highEmphasis,
   mediumEmphasis,
   lowEmphasis,
@@ -25,14 +26,15 @@ enum ButtonType {
   icon
 }
 
-class KobeButton { 
-
+class KobeButton 
+{ 
   Map<String, Object> properties;
   String text; 
   Function onPressed;
 
-//TO DO: check properties, if it's not missing anything
-  // const KobeButton({this.properties = buttonPropertiesDefault, this.text = stringTest, this.onPressed}): super ();
+  //  TO DO: check properties, if it's not missing anything
+  //  const KobeButton({this.properties = buttonPropertiesDefault, this.text = stringTest, this.onPressed}): super ();
+  
   KobeButton(Map<String, Object> properties, String text, Function onPressed) {
     this.properties =properties;
     this.text = text; 
