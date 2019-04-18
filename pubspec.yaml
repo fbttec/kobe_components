@@ -8,11 +8,14 @@ environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"
 
 dependencies:
+  json_annotation: ^2.2.0
   firebase: ^5.0.0
   flutter:
     sdk: flutter
 
 dev_dependencies:
+  built_runner: ^6.4.0
+  json_serializable: ^2.2.1
   flutter_test:
     sdk: flutter
 
