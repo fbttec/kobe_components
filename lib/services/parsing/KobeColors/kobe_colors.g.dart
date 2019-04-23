@@ -23,54 +23,90 @@ class _$KobeColorSerializer implements StructuredSerializer<KobeColor> {
         ..add('error')
         ..add(serializers.serialize(object.error,
             specifiedType: const FullType(String)));
+    } else {
+      result
+        ..add('error')
+        ..add('E63A2E');        
     }
     if (object.background != null) {
       result
         ..add('background')
         ..add(serializers.serialize(object.background,
             specifiedType: const FullType(String)));
+    } else {
+      result
+        ..add('background')
+        ..add('F8F8FF');
     }
     if (object.primaryVariant != null) {
       result
         ..add('primaryVariant')
         ..add(serializers.serialize(object.primaryVariant,
             specifiedType: const FullType(String)));
+    } else {
+      result
+        ..add('primaryVariant')
+        ..add('3CD3AD');
     }
     if (object.foreground != null) {
       result
         ..add('foreground')
         ..add(serializers.serialize(object.foreground,
             specifiedType: const FullType(String)));
+    } else {
+      result
+        ..add('foreground')
+        ..add('ffffff');
     }
     if (object.primary != null) {
       result
         ..add('primary')
         ..add(serializers.serialize(object.primary,
             specifiedType: const FullType(String)));
+    } else {
+      result
+        ..add('primary')
+        ..add('4CB8C4');
     }
     if (object.textColorHighEmphasis != null) {
       result
         ..add('textColorHighEmphasis')
         ..add(serializers.serialize(object.textColorHighEmphasis,
             specifiedType: const FullType(String)));
+    } else {
+      result
+        ..add('textColorHighEmphasis')
+        ..add('334659');
     }
     if (object.textColorMediumEmphasis != null) {
       result
         ..add('textColorMediumEmphasis')
         ..add(serializers.serialize(object.textColorMediumEmphasis,
             specifiedType: const FullType(String)));
+    } else {
+      result
+        ..add('textColorMediumEmphasis')
+        ..add('5C6B7A');
     }
     if (object.listSeparator != null) {
       result
         ..add('listSeparator')
         ..add(serializers.serialize(object.listSeparator,
             specifiedType: const FullType(String)));
+    } else {
+      result
+        ..add('listSeparator')
+        ..add('EFEFF4');
     }
     if (object.line != null) {
       result
         ..add('line')
         ..add(serializers.serialize(object.line,
             specifiedType: const FullType(String)));
+    } else {
+      result
+        ..add('line')
+        ..add('EFEFF4');
     }
 
     return result;
@@ -81,6 +117,16 @@ class _$KobeColorSerializer implements StructuredSerializer<KobeColor> {
       {FullType specifiedType = FullType.unspecified}) {
     final result = new KobeColorBuilder();
 
+    result.error = 'E63A2E';
+    result.background = 'F8F8FF';
+    result.primaryVariant = '3CD3AD';
+    result.foreground = 'ffffff';
+    result.primary = '4CB8C4';
+    result.textColorHighEmphasis = '334659';
+    result.textColorMediumEmphasis = '5C6B7A';
+    result.listSeparator = 'EFEFF4';
+    result.line = 'EFEFF4';
+
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
       final key = iterator.current as String;
@@ -88,40 +134,40 @@ class _$KobeColorSerializer implements StructuredSerializer<KobeColor> {
       final dynamic value = iterator.current;
       switch (key) {
         case 'error':
-          result.error = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          String deserializedString = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.error = (deserializedString.length > 2)?deserializedString:result.error;
           break;
         case 'background':
-          result.background = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          String deserializedString = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.background = (deserializedString.length > 2)?deserializedString:result.background;
           break;
         case 'primaryVariant':
-          result.primaryVariant = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          String deserializedString = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.primaryVariant = (deserializedString.length > 2)?deserializedString:result.primaryVariant;
           break;
         case 'foreground':
-          result.foreground = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          String deserializedString = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.foreground = (deserializedString.length > 2)?deserializedString:result.foreground;
           break;
         case 'primary':
-          result.primary = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          String deserializedString = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.primary = (deserializedString.length > 2)?deserializedString:result.primary;
           break;
         case 'textColorHighEmphasis':
-          result.textColorHighEmphasis = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          String deserializedString = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.textColorHighEmphasis = (deserializedString.length > 2)?deserializedString:result.textColorHighEmphasis;
           break;
         case 'textColorMediumEmphasis':
-          result.textColorMediumEmphasis = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          String deserializedString = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.textColorMediumEmphasis = (deserializedString.length > 2)?deserializedString:result.textColorMediumEmphasis;
           break;
         case 'listSeparator':
-          result.listSeparator = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          String deserializedString = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.listSeparator = (deserializedString.length > 2)?deserializedString:result.listSeparator;
           break;
         case 'line':
-          result.line = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          String deserializedString = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.line = (deserializedString.length > 2)?deserializedString:result.line;
           break;
       }
     }
